@@ -2,6 +2,8 @@ import os
 import collections
 import math
 
+def floor(value,size,offset=200):
+    return float((value+offset)//size)*size-offset
 
 def path(filename):
     filepath = os.path.realpath(__file__)
