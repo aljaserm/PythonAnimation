@@ -17,6 +17,24 @@ def line(a, b, x, y):
     turtle.down()
     turtle.goto(x, y)
 
+def square(x, y, size, name):
+    """Draw square at `(x, y)` with side length `size` and fill color `name`.
+
+    The square is oriented so the bottom left corner is at (x, y).
+
+    """
+    import turtle
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
+    turtle.color(name)
+    turtle.begin_fill()
+
+    for count in range(4):
+        turtle.forward(size)
+        turtle.left(90)
+
+    turtle.end_fill()
 
 class vector(collections.Sequence):
     PERCISION = 6
